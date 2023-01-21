@@ -7,7 +7,15 @@ const todoApi = {
     const result = await axios.get(ENDPOINT_URL)
     console.log(result)
     return result.data;
+  },
+  async post(todo) {
+    const result = await axios.post(ENDPOINT_URL, todo)
+    console.log(result)
+    return result.data;
   }
 }
 
-todoApi.getAll();
+todoApi.post({
+  id: 333333,
+  content: 'test'
+});
