@@ -23,10 +23,4 @@ const todoApi = {
   }
 }
 
-todoApi.patch({
-  "id": 'f2c38014-e2df-40ae-ac93-36303b8771ce',
-  "content": "英会話スクールに通う",
-  "editing": false,
-});
-
 export default todoApi;
