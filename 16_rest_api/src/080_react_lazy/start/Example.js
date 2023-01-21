@@ -5,6 +5,7 @@ const LazyComponentB = lazy(() => import('./components/ComponentB'))
 
 const Example = () => {
   const [compA, setCompA] = useState(true);
+
   return (
     <>
       <button onClick={() => {
