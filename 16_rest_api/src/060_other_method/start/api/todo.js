@@ -28,3 +28,5 @@ todoApi.patch({
   "content": "英会話スクールに通う",
   "editing": false,
 });
+
+export default todoApi;
