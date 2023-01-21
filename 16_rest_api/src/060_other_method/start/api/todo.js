@@ -12,10 +12,13 @@ const todoApi = {
     const result = await axios.post(ENDPOINT_URL, todo)
     console.log(result)
     return result.data;
+  },
+  async delete(todo) {
+    const result = await axios.delete(ENDPOINT_URL + '/' + todo.id)
+    return result.data;
   }
 }
 
-todoApi.post({
-  id: 333333,
-  content: 'test'
+todoApi.delete({
+  id: 'c5868bfe-fa1d-4891-acd3-bc43959a9bb7'
 });
