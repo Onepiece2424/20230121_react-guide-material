@@ -16,9 +16,15 @@ const todoApi = {
   async delete(todo) {
     const result = await axios.delete(ENDPOINT_URL + '/' + todo.id)
     return result.data;
+  },
+  async patch(todo) {
+    const result = await axios.put(ENDPOINT_URL + '/' + todo.id, todo)
+    return result.data;
   }
 }
 
-todoApi.delete({
-  id: 'c5868bfe-fa1d-4891-acd3-bc43959a9bb7'
+todoApi.patch({
+  "id": 'f2c38014-e2df-40ae-ac93-36303b8771ce',
+  "content": "英会話スクールに通う",
+  "editing": false,
 });
