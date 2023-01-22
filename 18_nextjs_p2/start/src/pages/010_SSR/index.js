@@ -8,6 +8,7 @@ export default function SSR() {
   const val = 0
 
   useEffect(() => {
+    console.log('useEffect')
     window.localStorage.setItem('key', 'value')
   }, [])
 
