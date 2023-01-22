@@ -9,7 +9,9 @@ export default function Home() {
       <Link href={{ pathname: "/07_router", query: { key: "value" }}}>
         <a>/07_router</a>
       </Link>
-      <a href="/07_router">/07_router</a>
+      <Link href="/07_router/hello/setting">
+        <a>/07_router</a>
+      </Link>
     </>
   )
 }
