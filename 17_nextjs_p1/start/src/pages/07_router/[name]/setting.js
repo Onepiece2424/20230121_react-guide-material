@@ -5,7 +5,7 @@ export default function Setting({ query }) {
 
   // ボタンクリック時にルートパスへ戻る
   const clickHandler = () => {
-    router.push('/')
+    router.push('/', 'dummy-url')
   }
 
   return (
