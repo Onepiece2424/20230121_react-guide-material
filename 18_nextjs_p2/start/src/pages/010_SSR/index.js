@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
 
-export default function SSR({ message }) {
-
+// export default function SSR({ message }) {
+export default function SSR() {
   const [state, setState] = useState('bye');
-  console.log(message)
+  // console.log(message)
   console.log('hello')
   const val = 0
 
@@ -16,17 +16,17 @@ export default function SSR({ message }) {
   return <h3>{state}</h3>
 }
 
-export async function getServerSideProps(context) {
+// export async function getServerSideProps(context) {
 
-  const { cookie } = context.req.headers;
-  console.log('cookie', cookie);
-  console.log('getServerSideProps is executed');
+//   const { cookie } = context.req.headers;
+//   console.log('cookie', cookie);
+//   console.log('getServerSideProps is executed');
 
-  return {
-    // redirect: {
-    //   destination: '/',
-    //   // permanent: false
-    // },
-    props: { message: 'From Server Side Props'}
-  }
-}
+//   return {
+//     // redirect: {
+//     //   destination: '/',
+//     //   // permanent: false
+//     // },
+//     props: { message: 'From Server Side Props'}
+//   }
+// }
