@@ -1,5 +1,9 @@
+import {useRouter} from 'next/router'
+
 export default function Setting({ query }) {
-  return <h1>{query.name}</h1>
+  const router = useRouter()
+  console.log(router);
+  return <h1>routerから取得:{ router. query.name}</h1>
 }
 
 export async function getServerSideProps({ query }) {
