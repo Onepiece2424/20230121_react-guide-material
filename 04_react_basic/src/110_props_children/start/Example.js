@@ -15,8 +15,8 @@ const Example = () => {
     <div>
       <Container title="順番通り渡す" children={
         [
-          <Profile {...profile[0]} />,
-          <Profile  {...profile[1]} />
+          <Profile key={profile[0].name} {...profile[0]} />,
+          <Profile key={profile[1].name} {...profile[1]} />
         ]
       } />
       <Container title="個別に渡す" >
