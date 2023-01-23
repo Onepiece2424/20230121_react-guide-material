@@ -18,7 +18,10 @@ const Example = () => {
           <Profile key={profile[0].name} {...profile[0]} />,
           <Profile key={profile[1].name} {...profile[1]} />
         ]
-      } />
+      }
+      first={<Profile key={profile[0].name} {...profile[0]} />}
+      second={<Profile key={profile[1].name} {...profile[1]} />}
+      />
       <Container title="個別に渡す" >
         <Profile  {...profile[1]} />
         <Profile {...profile[0]} />
