@@ -13,10 +13,12 @@ console.log({...profile[0]})
 const Example = () => {
   return (
     <div>
-      <Container title="順番通り渡す" >
-        <Profile {...profile[0]} />
-        <Profile  {...profile[1]} />
-      </Container>
+      <Container title="順番通り渡す" children={
+        [
+          <Profile {...profile[0]} />,
+          <Profile  {...profile[1]} />
+        ]
+      } />
       <Container title="個別に渡す" >
         <Profile  {...profile[1]} />
         <Profile {...profile[0]} />
