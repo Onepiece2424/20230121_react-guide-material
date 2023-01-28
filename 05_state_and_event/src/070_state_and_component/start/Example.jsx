@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const Example = () => {
 
-  // CountAとCountBを切り替えるフラグ
+  // CountAとCountBを切り替えるフラグ（ただし、コンポーネントが切り替わってもstateのcountは引き継がれる）
   const [flag, setFlag] = useState(true)
 
   // toggleボタンの表示の切り替え
