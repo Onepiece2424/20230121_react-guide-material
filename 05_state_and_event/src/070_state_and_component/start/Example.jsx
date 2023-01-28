@@ -13,7 +13,7 @@ const Example = () => {
   return (
     <>
       <button onClick={changeFlag}>toggle</button>
-      { flag ? <Count title="A" /> : <Count title="B" /> }
+      { flag ? <Count key="A" title="A" /> : <Count key="B" title="B" /> }
     </>
   )
 }
