@@ -15,11 +15,7 @@ const Example = () => {
 
   // 入力フォームの値のリセット
   const valueReset = () => {
-    setObj("")
-    const textForm1 = document.getElementById("form1");
-    const textForm2 = document.getElementById("form2");
-    textForm1.value = '';
-    textForm2.value = '';
+    setObj({ name: "", age: "" })
   }
 
   return (
