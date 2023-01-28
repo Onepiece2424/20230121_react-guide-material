@@ -1,6 +1,8 @@
 import { useState } from 'react';
 
 const Example = () => {
+
+  // stateの定義
   const orderObj = { item: 'apple', count: 10 };
   const [order, setOrder] = useState(orderObj);
 
