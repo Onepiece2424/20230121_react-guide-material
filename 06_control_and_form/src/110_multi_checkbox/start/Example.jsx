@@ -25,15 +25,21 @@ const Example = () => {
     setFruits(newFruits);
 
     // 合計値を計算(２パターンあり)
-    let sumVal = 0;
+    // let sumVal = 0;
     // newFruits.forEach((fruit) => {
     //   if (fruit.checked) {
     //     sumVal += fruit.value
     //   }
     // })
-    newFruits
+
+    // let sumVal = 0;
+    // newFruits
+    //   .filter((fruit) => fruit.checked)
+    //   .forEach((fruit) => (sumVal = sumVal + fruit.value))
+
+    let sumVal = newFruits
       .filter((fruit) => fruit.checked)
-      .forEach((fruit) => (sumVal = sumVal + fruit.value))
+      .reduce((sumVal, fruit) => sumVal + fruit.value, 0)
 
     setSum(sumVal);
   }
