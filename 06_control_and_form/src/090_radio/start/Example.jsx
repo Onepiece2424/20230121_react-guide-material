@@ -13,10 +13,10 @@ const Example = () => {
     <>
       {fruits.map((fruit) => {
         return (
-          <>
+          <label key={fruit}>
             <input type="radio" onChange={changeVal} value={fruit} checked={fruit === arr} />
-            <label>{fruit}</label>
-          </>
+            {fruit}
+          </label>
         )
       })}
 
