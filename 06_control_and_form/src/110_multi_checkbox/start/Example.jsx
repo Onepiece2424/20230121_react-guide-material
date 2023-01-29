@@ -9,7 +9,7 @@ const Example = () => {
 
   const [sum, setSum] = useState(0);
 
-  // ラジオボタンをクリック時に複数選択することができる
+  // チェックボックスを複数選択可能にする
   const changeVal = (e) => {
     const newFruits = fruits.map((fruit) => {
 
@@ -23,6 +23,15 @@ const Example = () => {
     })
 
     setFruits(newFruits);
+
+    // 合計値を計算
+    let sumVal = 0;
+    newFruits.forEach((fruit) => {
+      if (fruit.checked) {
+        sumVal += fruit.value
+      }
+    })
+    setSum(sumVal);
   }
 
   return (
