@@ -5,7 +5,7 @@ const Example = () => {
     <>
       <h3>配列の操作</h3>
       <ul>
-        {animals.map((animal) => <li key={animal.toString()}>Hello, {animal}</li>)}
+        {animals.map((animal) => <li key={animal}>Hello, {animal}</li>)}
       </ul>
     </>
   );
