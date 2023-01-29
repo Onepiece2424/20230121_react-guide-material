@@ -20,7 +20,7 @@ const Example = () => {
       <p>Profileコンポーネントを使用して、完成コードと同じ画面を作成してください。</p>
       <p>また、Profileコンポーネント内のリスト表示部分にkeyを設定して、ワーニング表示がされないようにしてください。</p>
       <ul>
-        {users.map((user) => <li key={user.name}><Profile name={user.name} age={user.age} hobbies={user.hobbies} /></li>)}
+        {users.map((user) => <li key={user.name}><Profile {...user} /></li>)}
       </ul>
     </>
   );
