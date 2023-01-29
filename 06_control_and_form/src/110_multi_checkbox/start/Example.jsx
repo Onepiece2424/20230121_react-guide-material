@@ -24,13 +24,17 @@ const Example = () => {
 
     setFruits(newFruits);
 
-    // 合計値を計算
+    // 合計値を計算(２パターンあり)
     let sumVal = 0;
-    newFruits.forEach((fruit) => {
-      if (fruit.checked) {
-        sumVal += fruit.value
-      }
-    })
+    // newFruits.forEach((fruit) => {
+    //   if (fruit.checked) {
+    //     sumVal += fruit.value
+    //   }
+    // })
+    newFruits
+      .filter((fruit) => fruit.checked)
+      .forEach((fruit) => (sumVal = sumVal + fruit.value))
+
     setSum(sumVal);
   }
 
