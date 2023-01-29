@@ -1,4 +1,5 @@
 import { useState } from "react";
+import AnimalFilter from "./components/AnimalFilter";
 import AnimalList from "./components/AnimalList";
 
 const Example = () => {
@@ -13,11 +14,7 @@ const Example = () => {
 
   return (
     <>
-      <input
-        type="text"
-        value={filterVal}
-        onChange={(e) => setFilterVal(e.target.value)}
-      />
+      <AnimalFilter filterState={[filterVal, setFilterVal]} />
       <AnimalList animals={filteredAnimals} />
     </>
   );
