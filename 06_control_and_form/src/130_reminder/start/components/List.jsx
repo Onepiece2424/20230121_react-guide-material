@@ -1,8 +1,10 @@
 const List = ({todos, deleteTodo}) => {
 
+  // 完了ボタンを押すと消える
   const complete = (id) => {
     deleteTodo(id)
   }
+  
   return (
     <div>
       {todos.map((todo) =>

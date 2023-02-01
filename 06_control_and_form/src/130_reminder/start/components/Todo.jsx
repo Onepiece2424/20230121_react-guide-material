@@ -20,6 +20,7 @@ const Todo = () => {
 
   const [todos,setTodos] = useState(todosList)
 
+  // 削除するTODOのidと一致しないものを残し、一致するものを更新
   const deleteTodo = (id) => {
     const newTodos = todos.filter((todo) => {
       return todo.id !== id;
