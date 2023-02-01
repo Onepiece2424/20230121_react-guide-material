@@ -29,10 +29,15 @@ const Todo = () => {
     setTodos(newTodos)
   }
 
+  // TODOの追加
+  const createTodo = (todo) => {
+    setTodos([...todos, todo])
+  }
+
   return (
     <>
-      <Form />
       <List todos={todos}  deleteTodo={deleteTodo} />
+      <Form createTodo={createTodo}/>
     </>
   )
 };

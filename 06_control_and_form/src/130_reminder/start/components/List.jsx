@@ -4,7 +4,7 @@ const List = ({todos, deleteTodo}) => {
   const complete = (id) => {
     deleteTodo(id)
   }
-  
+
   return (
     <div>
       {todos.map((todo) =>
