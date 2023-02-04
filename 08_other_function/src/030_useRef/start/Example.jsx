@@ -17,15 +17,15 @@ const Case1 = () => {
 
   return (
     <div>
-      <h3>ユースケース1</h3>
+      <h3>ボタンクリック時に入力フォームにフォーカスをあてる</h3>
       <input type="text" value={value} onChange={(e) => setValue(e.target.value)} ref={inputRef} />
       <button onClick={() => inputRef.current.focus()}>
         インプット要素をフォーカスする
       </button>
 
-      <h3>ユースケース2</h3>
+      <h3>動画再生プレイヤー</h3>
       <video style={{ maxWidth: "100%" }} ref={videoRef}>
-        <source src="./sample.mp4"></source>
+        <source src="./v07025ae0000bsimm2nlt7tgudllsojg.mp4"></source>
       </video>
       <button onClick={videoPlay}>{videoState ? "Stop" : "Play"}</button>
     </div>
