@@ -1,4 +1,4 @@
-import { Children, useState } from "react";
+import { useState } from "react";
 import { createPortal } from "react-dom";
 import Modal from "./components/Modal";
 
