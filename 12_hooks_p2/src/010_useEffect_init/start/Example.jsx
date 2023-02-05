@@ -5,10 +5,10 @@ const Example = () => {
   const [count, setCount] = useState(0)
 
   useEffect(() => {
-    setTimeout(() => {
+    setInterval(() => {
       setCount(prev => prev + 1)
     }, 1000)
-  })
+  },[])
   return (
     <>
       <h3>{count}秒経過</h3>
