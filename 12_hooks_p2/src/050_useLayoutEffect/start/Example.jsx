@@ -1,4 +1,6 @@
 import { useLayoutEffect, useEffect, useState } from "react";
+import Random from "./Random";
+
 const Example = () => {
   const [isDisp, setIsDisp] = useState(true);
 
@@ -46,10 +48,13 @@ const Timer = () => {
   }, [])
 
   return (
-    <h3>
-      <time>{time}</time>
-      <span>秒経過</span>
-    </h3>
+    <>
+      <h3>
+        <time>{time}</time>
+        <span>秒経過</span>
+      </h3>
+      <Random />
+    </>
     );
 };
 

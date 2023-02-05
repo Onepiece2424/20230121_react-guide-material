@@ -3,7 +3,8 @@ import { useLayoutEffect, useEffect, useState, useRef } from "react";
 const Random = () => {
   const [state, setState] = useState(0);
 
-  useEffect(() => {
+  // state0がチラチラ反映されるのを制御
+  useLayoutEffect(() => {
     if (state === 0) {
       setState(Math.random() * 300);
     }
