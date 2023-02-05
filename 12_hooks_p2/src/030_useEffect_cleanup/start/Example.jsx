@@ -16,19 +16,32 @@ const Timer = () => {
 
   // 依存配列を渡さないときのクリーンアップ関数の実行（Timerコンポーネントが消滅する時に実行）
   useEffect(() => {
-    console.log('init');
-    window.setInterval(() => {
+    // console.log('init');
+
+    let intervalId = null;
+
+    intervalId = window.setInterval(() => {
+      console.log('interval called')
       setTime(prev => prev + 1);
     }, 1000);
 
+    // クリーンアップ関数
     return () => {
-      console.log('end');
+      // console.log('end');
+      window.clearInterval(intervalId)
     }
   }, [])
 
+  // 依存配列を渡したときのクリーンアップ関数の実行（Timerコンポーネントが消滅する時に実行）
   useEffect(() => {
+    // console.log('updated')
     document.title = 'counter:' + time;
     window.localStorage.setItem('time-key-end', time)
+
+    return () => {
+      // debugger
+      // console.log('updated end')
+    }
   }, [time]);
 
   return (
