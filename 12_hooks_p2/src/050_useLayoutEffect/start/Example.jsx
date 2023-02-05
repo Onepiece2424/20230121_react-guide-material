@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useLayoutEffect, useEffect, useState } from "react";
 const Example = () => {
   const [isDisp, setIsDisp] = useState(true);
 
@@ -24,10 +24,10 @@ const Timer = () => {
       // console.log('end');
     }
   }, [])
-  
+
   useEffect(() => {
     // console.log('updated');
-    
+
     document.title = 'counter:' + time;
     window.localStorage.setItem('time-key', time);
 
@@ -35,6 +35,15 @@ const Timer = () => {
       // console.log('updated end');
     }
   }, [time]);
+
+  // useLayoutEffect
+  useLayoutEffect(() => {
+    const _time = parseInt(window.localStorage.getItem('time-key'));
+
+    if (!isNaN(_time)) {
+      setTime(_time);
+    }
+  }, [])
 
   return (
     <h3>
