@@ -2,11 +2,11 @@ import useCount from "./hooks";
 
 const Example = () => {
 
-  const { count, setCount } = useCount();
+  const { count, countUp } = useCount();
   return (
     <>
       <div>Counts: {count}</div>
-      <button onClick={() => { setCount(prev => prev + 1)}}>Count Up!</button>
+      <button onClick={countUp}>Count Up!</button>
     </>
   );
 };
