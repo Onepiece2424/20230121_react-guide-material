@@ -6,8 +6,8 @@ const useCount = () => {
 
   const countUp = () => setCount(prev => prev + 1)
   return {
-    count,
-    countUp
+    count: count,
+    countUp: countUp
   }
 }
 
